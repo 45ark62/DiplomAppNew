@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="LoginFragment_to_UserFragment" type="id" />
+    <item name="action_LoginFragment_to_UserFragment" type="id" />
+    <item name="action_LoginFragment_to_RegistrationFragment" type="id" />
+    <item name="button7" type="id" />
+    <item name="button6" type="id" />
+</resources>

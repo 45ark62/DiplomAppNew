@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/LoginFragment">
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.example.diplomappnew.LoginFragment"
+
+        tools:layout="@layout/fragment_login"
+        tools:ignore="ExtraText">
+        <action
+            android:id="@id/action_LoginFragment_to_UserFragment"
+            app:destination="@+id/UserFragment"/>
+        <action
+            android:id="@+id/action_LoginFragment_to_RegistrationFragment"
+            app:destination="@id/RegistrationFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/UserFragment"
+        android:name="com.example.diplomappnew.UserAccount"
+
+        tools:layout="@layout/fragment_user_account">
+
+
+        <action
+            android:id="@+id/action_UserFragment_to_recordsFragment"
+            app:destination="@id/recordsFragment" />
+        <action
+            android:id="@+id/action_UserFragment_to_accountsFragment"
+            app:destination="@id/accountsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/RegistrationFragment"
+        android:name="com.example.diplomappnew.RegistrationFragment"
+        tools:layout="@layout/fragment_registration">
+        <action
+            android:id="@+id/action_RegistrationFragment_to_UserFragment"
+            app:destination="@id/UserFragment" />
+        <action
+            android:id="@+id/action_RegistrationFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recordsFragment"
+        android:name="com.example.diplomappnew.ui.RecordsFragment"
+        android:label="fragment_records"
+        tools:layout="@layout/fragment_records" >
+        <action
+            android:id="@+id/action_recordsFragment_to_UserFragment"
+            app:destination="@id/UserFragment" />
+        <action
+            android:id="@+id/action_recordsFragment_to_accountsFragment"
+            app:destination="@id/accountsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountsFragment"
+        android:name="com.example.diplomappnew.ui.AccountsFragment"
+        android:label="fragment_accounts"
+        tools:layout="@layout/fragment_accounts" >
+        <action
+            android:id="@+id/action_accountsFragment_to_UserFragment"
+            app:destination="@id/UserFragment" />
+        <action
+            android:id="@+id/action_accountsFragment_to_recordsFragment"
+            app:destination="@id/recordsFragment" />
+    </fragment>
+</navigation>
